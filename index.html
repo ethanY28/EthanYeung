@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Icons</title>
+    <link rel="stylesheet" href="stylesheetey1.css">
+    <style>
+       
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="content" id="home">
+        <div class="about-me">
+            <h1 style="text-align: center">Ethan Yeung</h1>
+            <div class="typing-effect" id="typing-effect"></div>
+        </div>
+    </div>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun"></i>
+    </div>
+    <div class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <div class="scroll-icon" id="scroll-icon"><i class="fas fa-chevron-down"></i></div>
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i><span id="menu-text"></span>
+    </div>
+    <div class="button-container" id="button-container">
+        <a href="#home" onclick="closeMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="#about" onclick="closeMenu()"><i class="fas fa-user"></i> About</a>
+        <a href="#portfolio" onclick="closeMenu()"><i class="fas fa-briefcase"></i> Portfolio</a>
+	<a href="#timeline" onclick="closeMenu()"><i class="fas fa-clock"></i> Timeline</a>
+        <a href="#blog" onclick="closeMenu()"><i class="fas fa-blog"></i> Blog</a>
+        <a href="#contact" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+    <div class="aboutme" id="about">
+        <h1>About Me</h1>
+	<br>
+        <p class="topabout">
+            I'm a high school student with a deep passion for coding and technology. When I'm not studying, you can find me experimenting with new programming languages, working on personal projects, or exploring the latest tech trends. I'm fascinated by the endless possibilities that coding offers and enjoy learning about innovative solutions to real-world problems. As a curious and driven individual, I'm always looking for ways to improve my skills, expand my knowledge, and make a positive impact through technology.
+        </p>
+        <img class="myimage" src="ethanphoto.jpg" alt="Image of me" width="500" height="500">
+        <div class="section-education-section">
+            <h3>Education</h3>
+            <p>I am currently pursuing my high school education with a focus on computer science and technology.</p>
+        </div>
+        <div class="section-skills-section">
+            <h3>Skills</h3>
+            <ul>
+                <li>
+                    <span>Communication</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 70%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Organization</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Problem Solving</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Teamwork</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 75%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Creativity</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 70%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Adaptability</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span>Time Management</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 80%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="section languages-section">
+            <h3>Languages I Learn</h3>
+            <p style="color: var(--section-item-text-color);">I enjoy learning various programming languages and technologies. Here are some of the languages I have learned:</p>
+            <ul>
+                <li data-description="★★★★☆">
+                                <i class="fab fa-python"></i><br>Python</li>
+                <li data-description="★★☆☆☆"><i class="fab fa-js-square"></i><br>JavaScript</li>
+                <li data-description="★★★☆☆"><i class="fab fa-java"></i><br>Java</li>
+                <li data-description="★☆☆☆☆"><i class="fas fa-code"></i><br>Swift</li>
+                <li data-description="★★★★☆"><i class="fab fa-html5"></i><br>HTML & CSS</li>
+            </ul>
+        </div>
+        <div class="section-hobbies-section">
+            <h3>Hobbies</h3>
+        <ul>
+                <li><i class="fas fa-swimmer"></i> Swimming</li>
+                <li><i class="fas fa-gamepad"></i> Playing video games</li>
+                <li><i class="fas fa-laptop-code"></i> Coding</li>
+                <li><i class="fas fa-bed"></i> Sleeping</li>
+                <li><i class="fas fa-tools"></i> Exploring new frameworks and tools</li>
+        </ul>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+                <h1>My Portfolio</h1>
+		<div class="portfolio-projects>
+                <div class="projects">
+                        <div class="project">
+                                        <div class="carousel">
+                                                        <img src="javamemorygame.jpeg" alt="Memory Game" class="active">
+                                                        <img src="javamemomorygamehome.png" alt="Memory Game Home Page">
+                                                        <button class="arrow left" onclick="prevSlide(this)">&#10094;</button>
+                                                        <button class="arrow right" onclick="nextSlide(this)">&#10095;</button>
+                                        </div>
+                                        <h3>Memory Game</h3>
+                                        <p>This project was for my computer Science Course. I used Java Swing a popular GUI interface. </p>
+                                        <p><strong>Languages:</strong></p>
+                                        <p>
+                                                        <i class="fab fa-java" title="HTML" style="font-size: 20px;"></i> 100%
+                                        </p>
+                                        <button onclick="window.location.href='https://github.com/yourusername/project1'">View on GitHub</button>
+                        </div>
+                        <div class="project">
+                                        <div class="carousel">
+                                                        <img src="pomodoroappmain.png" alt="Pomodoro App" class="active">
+                                                        <img src="pomodoroappstatistics.png" alt="Pomodoro App">
+                                                        <button class="arrow left" onclick="prevSlide(this)">&#10094;</button>
+                                                        <button class="arrow right" onclick="nextSlide(this)">&#10095;</button>
+                                        </div>
+                                        <h3>Project 2</h3>
+                                        <p>Description of Project 2.</p>
+                                        <p><strong>Languages:</strong></p>
+                                        <p>
+                                                        <i class="fab fa-html5" title="HTML" style="font-size: 20px;"></i> 85%
+                                                        <i class="fab fa-css3-alt" title="CSS" style="font-size: 20px;"></i> 75%
+                                                        <i class="fab fa-js" title="JavaScript" style="font-size: 20px;"></i> 80%
+                                        </p>
+                                        <button onclick="window.location.href='https://github.com/yourusername/project2'">View on GitHub</button>
+                        </div>
+                      
+                </div>
+		</div>
+        </div>
+	<div class="largecontainertimeline">
+	<div class="containertimeline" id="timeline">
+	<h1 style="text-align: center; font-weight: bold; padding: 20px, 50px; color: var(--text-color)">Timeline</h1>
+
+                <div class="timeline-item left">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 1</h2>
+                                        <p>Description for event 1.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Code Icon">
+                        </div>
+                </div>
+                <div class="timeline-item right">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 2</h2>
+                                        <p>Description for event 2.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/design.png" alt="Design Icon">
+                        </div>
+                </div>
+                <div class="timeline-item left">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 3</h2>
+                                        <p>Description for event 3.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/innovation.png" alt="Innovation Icon">
+                        </div>
+                </div>
+                <div class="timeline-item right">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 4</h2>
+                                        <p>Description for event 4.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Rocket Icon">
+                        </div>
+                </div>
+                <div class="timeline-item left">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 5</h2>
+                                        <p>Description for event 5.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/ai.png" alt="AI Icon">
+                        </div>
+                </div>
+                <div class="timeline-item right">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 6</h2>
+                                        <p>Description for event 6.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/cloud.png" alt="Cloud Icon">
+                        </div>
+                </div>
+                <div class="timeline-item right">
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 7</h2>
+                                        <p>Description for event 7.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/virtual-reality.png" alt="VR Icon">
+                        </div>
+                </div>
+                <div class="timeline-item left">
+                        <div class="timeline-year">2027</div>
+                        <div class="timeline-item-content">
+                                <div>
+                                        <h2>Event 8</h2>
+                                        <p>Description for event 8.</p>
+                                </div>
+                                <img src="https://img.icons8.com/ios-filled/50/000000/blockchain.png" alt="Blockchain Icon">
+                        </div>
+                </div>
+                <div class="timeline-item right">
+                                <div class="timeline-year">2028</div>
+                                <div class="timeline-item-content">
+                                                <div>
+                                                                <h2>Event 9</h2>
+                                                                <p>Description for event 9.</p>
+                                                </div>
+                                                <img src="https://img.icons8.com/ios-filled/50/000000/robot.png" alt="Event 9 Image">
+                                </div>
+                </div>
+                <div class="timeline-item left">
+                                <div class="timeline-year">2029</div>
+                                <div class="timeline-item-content">
+                                                <div>
+                                                                <h2>Event 10</h2>
+                                                                <p>Description for event 10.</p>
+                                                </div>
+                                        <img src="https://img.icons8.com/ios-filled/50/000000/quantum-computing.png" alt="Event 10 Image">
+                                </div>
+                </div>
+                </div>
+        </div>
+    <div class="blog" id="blog">
+        <div class="blog">
+                <h1>My Blog</h1>
+                <div class="posts">
+                        <div class="post">
+                                        <h3>Blog Post 1</h3>
+                                        <p>Summary of Blog Post 1.</p>
+                        </div>
+                        <div class="post">
+                                        <h3>Blog Post 2</h3>
+                                        <p>Summary of Blog Post 2.</p>
+                        </div>
+                        <div class="post">
+                                        <h3>Blog Post 3</h3>
+                                        <p>Summary of Blog Post 3.</p>
+                        </div>
+                        <div class="post">
+                                        <h3>Blog Post 4</h3>
+                                        <p>Summary of Blog Post 4.</p>
+                        </div>
+                        <div class="post">
+                                        <h3>Blog Post 5</h3>
+                                        <p>Summary of Blog Post 5.</p>
+                        </div>
+                        <!-- Repeat for other blog posts -->
+                </div>
+                <div class="view-all">
+                <a href="blogey1.htm">Learn More</a>
+		</div>
+           
+  </section>
+
+
+        <script>
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('clicked');
+        });
+      });
+        </script>
+                </div>
+	</div>
+
+    </div>
+    <div class="contact-area" id="contact">
+        <h2 style="text-align: center; color: var(--text-color)">Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contactright">
+        </div>
+        <div class="contact-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <p style="text-align: center; color: var(--text-color)">©2025 Ethan Yeung</p>
+    </div>
+    <script type="text/javascript" src="javascriptey1.js"></script>
+    <script>
+        function toggleMenu() {
+            const buttonContainer = document.getElementById('button-container');
+            buttonContainer.classList.toggle('active');
+            
+            const menuText = document.getElementById('menu-text');
+            menuText.textContent = buttonContainer.classList.contains('active') ? 'Close' : 'Menu';
+            
+            const menu = document.querySelector('.menu');
+            if (menu) {
+                menu.classList.toggle('open');
+            }
+        }
+
+        function closeMenu() {
+            const buttonContainer = document.getElementById('button-container');
+            buttonContainer.classList.remove('active');
+            const menuText = document.getElementById('menu-text');
+            menuText.textContent = 'Menu';
+            
+            const menu = document.querySelector('.menu');
+            if (menu) {
+                menu.classList.remove('open');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#home, #about, #portfolio, #timeline, #blog, #contact');
+            const menuText = document.getElementById('menu-text');
+
+            window.addEventListener('scroll', () => {
+                let current = 'Menu';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                if (!document.getElementById('button-container').classList.contains('active')) {
+                    menuText.textContent = current.charAt(0).toUpperCase() + current.slice(1);
+                }
+            });
+        });
+                function nextSlide(button) {
+                        const carousel = button.closest('.carousel');
+                        const images = carousel.querySelectorAll('img');
+                        let activeIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+                        images[activeIndex].classList.remove('active');
+                        activeIndex = (activeIndex + 1) % images.length;
+                        images[activeIndex].classList.add('active');
+                }
+		document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section, myimage, .topabout, .project, .blog .post, .section-skills-section li, .timeline-item-content, .section-hobbies-section li');
+
+        const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                        }
+                });
+        }, {
+                threshold: 0.1
+        });
+
+        sections.forEach(section => {
+                observer.observe(section);
+        });
+});
+
+                function prevSlide(button) {
+                        const carousel = button.closest('.carousel');
+                        const images = carousel.querySelectorAll('img');
+                        let activeIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+                        images[activeIndex].classList.remove('active');
+                        activeIndex = (activeIndex - 1 + images.length) % images.length;
+                        images[activeIndex].classList.add('active');
+                }
+		document.addEventListener("DOMContentLoaded", function() {
+                        var screenWidth = window.innerWidth;
+                        var container = document.querySelector('.container');
+                        container.style.maxWidth = screenWidth + 'px';
+                });
+ 
+    </script>
+</body>
+</html>
+
+
